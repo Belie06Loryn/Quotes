@@ -12,7 +12,7 @@ export class QuoteComponent implements OnInit {
   toggle(index){
     this.kote[index].showDescription = !this.kote[index].showDescription;
   }
-  del(isComplete, index){
+  deleteQ(isComplete, index){
     if (isComplete) {
       let toDelete = confirm(`Are you sure you want to delete ${this.kote[index].quot}?`)
 

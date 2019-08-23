@@ -13,13 +13,13 @@
         <ul>
             <div *ngFor='let kotas of kote;let i =index'>
                 <li>{{kotas.quot}} </li>
-                <button (click)='toggle(i)'>More Details</button>
-                <app-display-quote-details *ngIf='kotas.showDescription' [kote]='kotas' (isComplete) = 'del($event,i)'></app-display-quote-details>
+                <button (click)='toggle(i)' class="btn btn-primary">More Details</button>
+                <app-display-quote-details *ngIf='kotas.showDescription' [kote]='kotas' (isComplete) = 'deleteQ($event,i)'></app-display-quote-details>
             </div>
         </ul>
     </div>
     <div class="col-lg-6">
-
+        <app-words-form></app-words-form>
     </div>
 </body>
 </html>
