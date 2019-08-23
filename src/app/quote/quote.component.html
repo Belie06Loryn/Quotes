@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Quote</title>
+</head>
+<body>
+    <div class="col-lg-6">
+        <h1>Deep Heart Words</h1>
+        <hr style="margin: 80px;">
+        <ul>
+            <div *ngFor='let kotas of kote;let i =index'>
+                <li>{{kotas.quot}} </li>
+                <button (click)='toggle(i)'>More Details</button>
+                <app-display-quote-details *ngIf='kotas.showDescription' [kote]='kotas' (isComplete) = 'del($event,i)'></app-display-quote-details>
+            </div>
+        </ul>
+    </div>
+    <div class="col-lg-6">
+
+    </div>
+</body>
+</html>
