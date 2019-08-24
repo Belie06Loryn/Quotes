@@ -13,13 +13,25 @@
         <ul>
             <div *ngFor='let kotas of kote;let i =index'>
                 <li>{{kotas.quot}} </li>
+                <br>
+                <div>
+                    <a class="like">
+                        <i class="fa fa-thumbs-o-up"></i>  Like
+                        <input class="likes" name="like" readonly="readonly" type="text" value="0" />
+                    </a>
+                    <a class="dislike">
+                        <i class="fa fa-thumbs-o-down"></i> Dislike 
+                        <input class="dislikes"  name="dislike" readonly="readonly" type="text" value="0" />
+                    </a>
+                </div>
+                 <br>   
                 <button (click)='toggle(i)' class="btn btn-primary">More Details</button>
                 <app-display-quote-details *ngIf='kotas.showDescription' [kote]='kotas' (isComplete) = 'deleteQ($event,i)'></app-display-quote-details>
             </div>
         </ul>
     </div>
     <div class="col-lg-6">
-        <app-words-form></app-words-form>
+        <app-words-form (addQuote)="addNewQuote($event)"></app-words-form>
     </div>
 </body>
 </html>

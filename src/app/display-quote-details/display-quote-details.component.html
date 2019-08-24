@@ -1,4 +1,5 @@
-<p>{{kote.name}}</p>
-<p>{{kote.author}}</p>
-<p>{{kote.completeDate|dateCount}} days</p>
+<p> <strong>Author Name:</strong> {{kote.author}}</p>
+<p> <strong>Publisher Name:</strong> {{kote.name}}</p>
+<p> <strong>Posted On:</strong> {{kote.completeDate|date|uppercase}}</p>
+<p> <strong>Duration:</strong> {{kote.completeDate|dateCount}} days</p>
 <button (click)= 'Delete(true)' class="btn btn-outline-danger">Delete</button>

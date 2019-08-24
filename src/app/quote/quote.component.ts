@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {Quote} from '../quote'
+import * as $ from 'jquery';
 @Component({
   selector: 'app-quote',
   templateUrl: './quote.component.html',
@@ -7,7 +8,8 @@ import {Quote} from '../quote'
 })
 export class QuoteComponent implements OnInit {
   kote: Quote []=[
-    new Quote(1,'public quot:string','public author:string', 'public name:string', new Date(2019,3,14)),
+    new Quote(1,'Belie Loryn','We always have millions words but we find it difficult to express it in few lines,but also can be described in One picture:)', 'Alexie_Manirakora', new Date(2019,1,14)),
+    new Quote(2,'Belie Loryn','The words come from mind and flow through the veins to the pen and be executed on the paper #real Gun of the writers', 'Alexie_Manirakora', new Date(2019,3,14)),
   ];
   toggle(index){
     this.kote[index].showDescription = !this.kote[index].showDescription;
@@ -21,9 +23,27 @@ export class QuoteComponent implements OnInit {
       }
     }
   }
+  addNewQuote (kotas){
+    let kotasLength = this.kote.length;
+    kotas.id = kotasLength+1;
+    this.kote.push(kotas)
+  }
+  
   constructor() { }
 
   ngOnInit() {
+    $(function() {
+      $(".like").click(function() {
+          var input = $(this).siblings('.likes');
+          $('.like').append(input.val()) + 1;
+      });
+    
+      $(".dislike").click(function() {
+          var input = $(this).siblings('.dislikes');
+          $('.dislike').append(input.val()) - 1;
+      });
+    });
   }
 
 }
+
