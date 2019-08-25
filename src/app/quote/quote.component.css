@@ -24,3 +24,19 @@
     background: transparent;
 
 }
+.hr{ 
+    display: block;
+    margin-left:150px;
+    margin-right: 150px;
+    border-style: inset;
+    border-width: 1px;
+  } 
+  footer {
+    position: static;
+    background-color:transparent;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    color:rgb(0, 0, 0);
+    text-align: center;
+  }

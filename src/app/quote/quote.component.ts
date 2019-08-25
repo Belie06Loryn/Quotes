@@ -32,7 +32,7 @@ export class QuoteComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    $(function() {
+    $(function(tick) {
       $(".like").click(function() {
           var input = $(this).siblings('.likes');
           $('.like').append(input.val()) + 1;
