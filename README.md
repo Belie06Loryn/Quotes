@@ -58,14 +58,20 @@ After inputing, they will be display the quote with like and unlike buttons,and 
 ## Known Bugs
 No Bugs
 ## Technologies Used
-Languages I have used:HTML(HyperText Markerup Language) for structuring pages.
-                     CSS(Cascading Style Sheet) for making some design and good looking.
-                     Bootstrap for making my page much more attractive.
-                     jQuery for button functionality.
-                     Anguraljs as a framework. 
-                     typescript for making code easier to read and understand.
-Tools that I have used:Visual Studio Code as a text editor.
-                       GitHub for hosting my project and keep it safe.
+Languages I have used: 
+
+* HTML(HyperText Markerup Language) for structuring pages.
+* CSS(Cascading Style Sheet) for making some design and good looking.
+* Bootstrap for making my page much more attractive.
+* jQuery for button functionality.
+* Anguraljs as a framework. 
+* typescript for making code easier to read and understand.
+
+Tools that I have used:
+
+* Visual Studio Code as a text editor.
+* GitHub for hosting my project and keep it safe.
+
 ## Support and contact details
 If you meet an issues,you have questions,an ideas or concerns.Just contact me on https://github.com/Belie06Loryn .
 ### License
