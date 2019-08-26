@@ -33,17 +33,16 @@ export class QuoteComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    $(function(tick) {
-      $(".like").click(function() {
-          var input = $(this).siblings('.likes');
-          $('.like').append(input.val()) + 1;
+    $(function () {
+      $(".like").click(function () {
+          var input = $(this).find('.likes');
+          input.val(parseInt(input.val())+ 1);
       });
-    
-      $(".dislike").click(function() {
-          var input = $(this).siblings('.dislikes');
-          $('.dislike').append(input.val()) - 1;
-      });
-    });
+  $(".dislike").click(function () {
+      var input = $(this).find('.dislikes');
+      input.val(input.val() - 1);
+  });
+});
   }
 
 }
