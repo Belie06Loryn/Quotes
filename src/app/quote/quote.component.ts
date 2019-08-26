@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {Quote} from '../quote'
-import * as $ from 'jquery';
+import * as $ from 'node_modules/jquery'
 @Component({
   selector: 'app-quote',
   templateUrl: './quote.component.html',
@@ -28,6 +28,7 @@ export class QuoteComponent implements OnInit {
     kotas.id = kotasLength+1;
     this.kote.push(kotas)
   }
+  
   
   constructor() { }
 
